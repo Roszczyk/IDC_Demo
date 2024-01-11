@@ -7,7 +7,7 @@ import time
 from threading import Thread
 import platform
 # from concurrent import futures
-# from metaflow import Parameter
+from metaflow import Parameter
 
 COUNT_MAX=10000000
 THREADS=15
@@ -32,7 +32,8 @@ threads=[]
 
 begin=time.time()
 
-# num_cores=Parameter('num-cores')
+num_cores=Parameter('num-cores')
+print(num_cores)
 
 for i in range(THREADS):
     # threads.append(Thread(target=imhere, args=[i]))
