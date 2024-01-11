@@ -30,3 +30,5 @@ if __name__ == "__main__":
     with Pool(processes=num_processes) as pool:
         pool.map(task, range(num_processes))
     print(f"Time spent on all threads: {time.time()-begin}")
+
+print(f"CPU: {platform.processor()}")
